@@ -1,0 +1,38 @@
+#main {
+    background: black;
+}
+
+#navbar {
+    background-color: rgb(39, 38, 38);
+    border-bottom: 1px solid rgb(39, 39, 39);
+    color: white !important;
+}
+a {
+    color: white!important;
+}
+
+.cart {
+    position: relative;
+    right: 20%;
+}
+.footer {
+    background-color: rgb(188, 205, 126);
+    height: 50px;
+}
+#content {
+    padding-left: 8%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    
+}
+#navbar3 {
+    text-align: center;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+#footer {
+    text-align: center;
+    font-size: larger;
+}
