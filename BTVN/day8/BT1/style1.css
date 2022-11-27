@@ -1,0 +1,41 @@
+
+body{
+    
+}
+.header {
+    text-align: center;
+}
+
+#card {
+    background-color: rgb(234, 229, 223);
+    border-radius: 0%;
+    padding-top: 30px;
+    width: 400px;
+    
+}
+form {
+    padding-left: 35px !important;
+    padding-right: 35px!important;
+}
+#fullname {
+    border-radius: 0%;
+    height: 45px;
+}
+#email {
+    border-radius: 0%;
+    height: 45px;
+}
+#password {
+    border-radius: 0%;
+    height: 45px;
+}
+#button {
+    height: 45px;
+    
+}
+#eye {
+    position: absolute;
+    top: 377px;
+    right: 50px;
+    color: rgb(85, 83, 83);
+}
