@@ -12,61 +12,69 @@
 <body>
     <div class="container">
         <div class="row card" id="card">
-            <form action="" >
-                <div class="cuakhau">
+            <form id="form" class="validated" >
+                <div class="gate">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Cửa khẩu: (*)</label>
-                        <select class="form-select" id="inputGroupSelect01">
-                            <option selected>Chọn</option>
+                        <label for="gate" class="form-label">Cửa khẩu: (*)</label>
+                        <select id="gate" class="form-select" required aria-label="select example">
+                            <option value="">Chọn</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                           </select>
+                          <div class="invalid-feedback">Chọn một</div>
                       </div>
                 </div>
-                <div class="hoten">
+                <div class="name">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Họ tên (ghi chữ IN HOA): (*)</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                        <label for="name" class="form-label">Họ tên (ghi chữ IN HOA): (*)</label>
+                        <input type="text" class="form-control" id="name" required onblur="validName()">
+                        <div class="invalid-feedback">Không được để trống</div>
                       </div>
                 </div>
-                <div class="namsinh">
+                <div class="birth-year">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Năm sinh: (*)</label>
-                        <input type="date-year" class="form-control" id="exampleFormControlInput1" placeholder="yyyy">
+                        <label for="birth" class="form-label">Năm sinh: (*)</label>
+                        <input type="number" class="form-control" id="birth" placeholder="yyyy" min="1900" max="2022" required>
+                        <div class="invalid-feedback">Giới hạn 1900 đến 2022</div>
                       </div>
                 </div>
-                <div class="gioitinh">
+                <div class="gender">
                     <div class="mb-3">
-                        <label for="gender" class="form-label">Giới tính: (*)</label>
-                        <select class="form-select" id="gender">
-                            <option selected>Nam</option>
-                            <option value="1">Nam</option>
-                            <option value="2">Nữ</option>
-                            <option value="3">Khác</option>
-                          </select>
+                        <label for="gender" class="form-label">Giởi tính: (*)</label>
+                        <select id="gender" class="form-select" required aria-label="select example">
+                          <option value="">Chọn</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="invalid-feedback">Chọn một</div>
                       </div>
                 </div>
-                <div class="quoctich">
+                <div class="national">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Quốc tịch: (*)</label>
-                        <select class="form-select" id="inputGroupSelect01">
-                            <option selected>Chọn</option>
-                            <option value="1">Việt Nam</option>
-                            <option value="2">Lào<ol></ol></option>
-                            <option value="3">Trung Quốc</option>
-                          </select>
+                        <label for="national" class="form-label">Quốc tịch: (*)</label>
+                        <select id="national" class="form-select" required aria-label="select example" required>
+                          <option value="">Chọn</option>
+                          <option value="1">Việt Nam</option>
+                          <option value="2">Lào</option>
+                          <option value="3">Khác</option>
+                        </select>
+                        <div class="invalid-feedback">Chọn một</div>
                       </div>
                 </div>
-                <div class="hochieu">
+                <div class="passport">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Sổ hộ chiếu hoặc giấy thông hành hợp pháp khác: (*)</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <label for="passport" class="form-label">Hộ chiếu hoặc giấy thông hành hợp pháp: (*)</label>
+                        <input type="number" class="form-control" id="passport" required onblur="validPassport()" pattern="8">
+                        <div class="invalid-feedback">Không được để trống</div>
                       </div>
                 </div>
+                <button id="button" class="btn btn-outline-primary" >SEND</button>
             </form>
         </div>
         
     </div>
+<script src="./script2.js"></script>
 </body>
 </html>
