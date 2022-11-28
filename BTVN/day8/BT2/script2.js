@@ -4,12 +4,11 @@ function validName() {
     name.value = name.value.toUpperCase();
   }
 
-function validPassport() {
+function passport() {
     var passport = document.getElementById("passport").value;
-    a = passport.indexOf("/^(A-Z)/");
-
-    if (a === "" || a > 1) {
-        
+    if (passport.lenght !== 8) {
+        alert( "Please provide your name!" );
+        document.myForm.Name.focus() ;
+        return false;
     }
-
 }
